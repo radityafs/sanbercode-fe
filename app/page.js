@@ -22,7 +22,7 @@ export default function Home() {
         localStorage.setItem("token", data.data.token);
         localStorage.setItem("user", JSON.stringify(data.data));
 
-        router.push("/dashboard");
+        router.push("/dashboard/books");
       } else {
         toast.error(data.error);
       }
