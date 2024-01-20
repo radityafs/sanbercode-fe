@@ -115,7 +115,7 @@ const BookModal = (props) => {
                   name="price"
                   id="price"
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                  placeholder="$2999"
+                  placeholder="$ 0.00"
                   required
                   value={data.price}
                   onChange={(e) => {
@@ -179,7 +179,7 @@ const BookModal = (props) => {
                   name="total_page"
                   id="total_page"
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                  placeholder="1980 - 2021"
+                  placeholder="Total Page"
                   required
                   value={data.total_page}
                   onChange={(e) => {
@@ -202,7 +202,7 @@ const BookModal = (props) => {
                   id="description"
                   rows="4"
                   className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder="Write product description here"
+                  placeholder="Write book description here"
                 ></textarea>
               </div>
             </div>
