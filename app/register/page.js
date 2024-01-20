@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import useSWRMutation from "swr/mutation";
 import { useRouter } from "next/navigation";
 import Auth from "@/helper/fetcher/auth/auth";

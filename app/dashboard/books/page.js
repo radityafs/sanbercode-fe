@@ -11,12 +11,8 @@ import DeleteModal from "@/components/modal/deleteModal";
 import BookModal from "@/components/modal/bookModal";
 import categories from "@/helper/fetcher/categories/categories";
 import useDebounce from "@/hooks/useDebounce";
-import { useSearchParams } from "next/navigation";
 
 export default function Home() {
-  const searchParams = useSearchParams();
-  const debouncedSearch = useDebounce(filter, 200);
-
   const [filter, setFilter] = useState({
     title: null,
     categoryId: null,
@@ -26,6 +22,8 @@ export default function Home() {
     maxPage: null,
     sortByTitle: null,
   });
+
+  const debouncedSearch = useDebounce(filter, 200);
 
   const [selectedBookDelete, setSelectedBookDelete] = useState(null);
   const [selectedBookEdit, setSelectedBookEdit] = useState(null);
@@ -96,6 +94,8 @@ export default function Home() {
 
   // Fetch data on first render
   useEffect(() => {
+    const searchParams = new URLSearchParams(window.location.search);
+
     if (searchParams.get("categoryId")) {
       setFilter({
         ...filter,
