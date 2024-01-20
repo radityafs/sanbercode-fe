@@ -3,7 +3,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## Deployment
 
 this project is deployed on [Vercel](https://vercel.com/)
-you can access the project on [https://sanbercode-fe.vercel.app/](https://sanbercode-fe.vercel.app/)
+you can access the project on [https://frontend.radityafirmansyaputra.com](https://frontend.radityafirmansyaputra.com)
 
 ## Getting Started
 
