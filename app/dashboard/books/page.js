@@ -254,8 +254,10 @@ export default function Home() {
                   }}
                 >
                   <option value="">All Category</option>
-                  {dataGetCategories?.data?.map((category) => (
-                    <option value={category.id}>{category.name}</option>
+                  {dataGetCategories?.data?.map((category, index) => (
+                    <option key={index} value={category.id}>
+                      {category.name}
+                    </option>
                   ))}
                 </select>
               </div>

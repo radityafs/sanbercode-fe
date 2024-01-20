@@ -45,8 +45,8 @@ const tableBooks = ({ books, handleDelete, handleEdit }) => {
           </tr>
         </thead>
         <tbody>
-          {books?.map((book) => (
-            <tr className="border-b dark:border-gray-700">
+          {books?.map((book, index) => (
+            <tr className="border-b dark:border-gray-700" key={index}>
               <td className="px-4 py-3">{book.id}</td>
               <td className="px-4 py-3">
                 <div className="flex items-center text-sm">
