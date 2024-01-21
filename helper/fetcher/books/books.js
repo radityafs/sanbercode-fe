@@ -4,7 +4,7 @@ const getBooks = async ([_, filter]) => {
   const urlSearch = new URLSearchParams();
 
   Object.keys(filter).forEach((key) => {
-    if (filter[key] !== null) {
+    if (filter[key] !== null && filter[key] !== "") {
       urlSearch.append(key, filter[key]);
     }
   });
