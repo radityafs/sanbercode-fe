@@ -11,14 +11,16 @@ const fetcher = async ({ url, method = "GET", body = null, headers = {} }) => {
       body: body ? JSON.stringify(body) : null,
     });
     const result = await response.json();
+
+    if (result.code === 401 && result.error === "You are not logged in") {
+      localStorage.removeItem("token");
+      localStorage.removeItem("user");
+      window.location.href = "/";
+    }
+
     return result;
   } catch (error) {
-    if (error.message === "You are not logged in") {
-      // localStorage.removeItem("token");
-      // window.location.href = "/login";
-    } else {
-      throw new Error(error.message);
-    }
+    throw new Error(error);
   }
 };
 

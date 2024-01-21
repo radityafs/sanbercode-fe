@@ -14,13 +14,13 @@ import useDebounce from "@/hooks/useDebounce";
 
 export default function Home() {
   const [filter, setFilter] = useState({
-    title: null,
-    categoryId: null,
-    minYear: null,
-    maxYear: null,
-    minPage: null,
-    maxPage: null,
-    sortByTitle: null,
+    title: "",
+    categoryId: "",
+    minYear: "",
+    maxYear: "",
+    minPage: "",
+    maxPage: "",
+    sortByTitle: "",
   });
 
   const debouncedSearch = useDebounce(filter, 200);
@@ -296,7 +296,7 @@ export default function Home() {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        fill-rule="evenodd"
+                        fillRule="evenodd"
                         d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
                         clipRule="evenodd"
                       />
@@ -336,7 +336,7 @@ export default function Home() {
                   >
                     <path
                       clipRule="evenodd"
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                       d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
                     />
                   </svg>
